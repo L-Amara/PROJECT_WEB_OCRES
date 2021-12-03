@@ -235,7 +235,7 @@ function App() {
             </div>
             <ul className="chat-list">
               <li className="list active">
-                <div className="profile"><img src="images/faces/face1.jpg" alt="image"/><span className="online"></span></div>
+                <div className="profile"><img src="images/faces/face1.jpg" alt=""/><span className="online"></span></div>
                 <div className="info">
                   <p>Thomas Douglas</p>
                   <p>Available</p>
@@ -243,7 +243,7 @@ function App() {
                 <small className="text-muted my-auto">19 min</small>
               </li>
               <li className="list">
-                <div className="profile"><img src="images/faces/face2.jpg" alt="image"/><span className="offline"></span></div>
+                <div className="profile"><img src="images/faces/face2.jpg" alt=""/><span className="offline"></span></div>
                 <div className="info">
                   <div className="wrapper d-flex">
                     <p>Catherine</p>
@@ -254,7 +254,7 @@ function App() {
                 <small className="text-muted my-auto">23 min</small>
               </li>
               <li className="list">
-                <div className="profile"><img src="images/faces/face3.jpg" alt="image"/><span className="online"></span></div>
+                <div className="profile"><img src="images/faces/face3.jpg" alt=""/><span className="online"></span></div>
                 <div className="info">
                   <p>Daniel Russell</p>
                   <p>Available</p>
@@ -262,7 +262,7 @@ function App() {
                 <small className="text-muted my-auto">14 min</small>
               </li>
               <li className="list">
-                <div className="profile"><img src="images/faces/face4.jpg" alt="image"/><span className="offline"></span></div>
+                <div className="profile"><img src="images/faces/face4.jpg" alt=""/><span className="offline"></span></div>
                 <div className="info">
                   <p>James Richardson</p>
                   <p>Away</p>
@@ -270,7 +270,7 @@ function App() {
                 <small className="text-muted my-auto">2 min</small>
               </li>
               <li className="list">
-                <div className="profile"><img src="images/faces/face5.jpg" alt="image"/><span className="online"></span></div>
+                <div className="profile"><img src="images/faces/face5.jpg" alt=""/><span className="online"></span></div>
                 <div className="info">
                   <p>Madeline Kennedy</p>
                   <p>Available</p>
@@ -278,7 +278,7 @@ function App() {
                 <small className="text-muted my-auto">5 min</small>
               </li>
               <li className="list">
-                <div className="profile"><img src="images/faces/face6.jpg" alt="image"/><span className="online"></span></div>
+                <div className="profile"><img src="images/faces/face6.jpg" alt=""/><span className="online"></span></div>
                 <div className="info">
                   <p>Sarah Graves</p>
                   <p>Available</p>
