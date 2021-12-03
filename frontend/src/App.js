@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import WidgetYT from './components/WidgetYT';
+import Footer from './components/footer';
 
 function App() {
   return (
-    /* <div className="App">
+     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,10 +20,13 @@ function App() {
         >
           Learn React
         </a>
+        <WidgetYT/> 
+        <Footer/> 
       </header>
-    </div> */
+      
+    </div> 
 
-   
+   /*
   <div className="container-scroller">
     <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -119,9 +124,9 @@ function App() {
         </button>
       </div>
     </nav>
-    {/* <!-- partial --> */}
+   
     <div className="container-fluid page-body-wrapper">
-      {/* <!-- partial:partials/_settings-panel.html --> */}
+      
       <div className="theme-setting-wrapper">
         <div id="settings-trigger"><i className="ti-settings"></i></div>
         <div id="theme-settings" className="settings-panel">
@@ -227,7 +232,7 @@ function App() {
               <p className="text-gray mb-0 ">Call Sarah Graves</p>
             </div>
           </div>
-          {/* <!-- To do section tab ends --> */}
+          
           <div className="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
             <div className="d-flex align-items-center justify-content-between border-bottom">
               <p className="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
@@ -287,11 +292,10 @@ function App() {
               </li>
             </ul>
           </div>
-          {/* <!-- chat tab ends --> */}
+      
         </div>
       </div>
-      {/* <!-- partial --> */}
-      {/* <!-- partial:partials/_sidebar.html --> */}
+     
       <nav className="sidebar sidebar-offcanvas" id="sidebar">
         <ul className="nav">
           <li className="nav-item">
@@ -396,7 +400,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      {/* <!-- partial --> */}
+
       <div className="main-panel">
         <div className="content-wrapper">
           <div className="row">
@@ -404,6 +408,7 @@ function App() {
               <div className="row">
                 <div className="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 className="font-weight-bold">Welcome Aamir</h3>
+                  <widgetYT />
                   <h6 className="font-weight-normal mb-0">All systems are running smoothly! You have <span className="text-primary">3 unread alerts!</span></h6>
                 </div>
                 <div className="col-12 col-xl-4">
@@ -425,6 +430,7 @@ function App() {
             </div>
           </div>
           <div className="row">
+            
             <div className="col-md-6 grid-margin stretch-card">
               <div className="card tale-bg">
                 <div className="card-people mt-auto">
@@ -443,6 +449,7 @@ function App() {
                 </div>
               </div>
             </div>
+            
             <div className="col-md-6 grid-margin transparent">
               <div className="row">
                 <div className="col-md-6 mb-4 stretch-card transparent">
@@ -1043,21 +1050,21 @@ function App() {
               </div>
             </div>
         </div>
-        {/* <!-- content-wrapper ends --> */}
-        {/* <!-- partial:partials/_footer.html --> */}
+        { <!-- content-wrapper ends -->/}
+        { <!-- partial:partials/_footer.html --> }
         <footer className="footer">
           <div className="d-sm-flex justify-content-center justify-content-sm-between">
             <span className="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
             <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i className="ti-heart text-danger ml-1"></i></span>
           </div>
         </footer>
-        {/* <!-- partial --> */}
+        { <!-- partial --> }
       </div>
-      {/* <!-- main-panel ends --> */}
+      { <!-- main-panel ends --> }
     </div>
-    {/* <!-- page-body-wrapper ends --> */}
+    { <!-- page-body-wrapper ends --> }
   </div>
-  
+*/
   /* <!-- container-scroller --> */
 
  
