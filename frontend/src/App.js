@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import WidgetYT from './components/WidgetYT';
+import widgetYT from './components/widgetYT';
 import Footer from './components/footer';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-        <WidgetYT/> 
+        <widgetYT/> 
     
       </header>
       
@@ -522,7 +522,7 @@ function App() {
               </div>
             </div>
             <div className="col-md-6 grid-margin stretch-card">
-            <WidgetYT/>
+            <widgetYT/>
             </div>
           </div>
           <div className="row">
