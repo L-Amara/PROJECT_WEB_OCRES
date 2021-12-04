@@ -1,33 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import widgetYT from './components/widgetYT';
+import WidgetYT from './components/widgetYT';
 import Footer from './components/footer';
+import Spotify from './Spotify';
 
 function App() {
-  return (/*
-     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <widgetYT/> 
-    
-      </header>
-      
-    </div> 
+  return (
 
-  */ 
+  <div>
+     
+   
   <div className="container-scroller">
+
+    
     <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a className="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo.svg" className="mr-2" alt="logo"/></a>
@@ -408,7 +392,7 @@ function App() {
               <div className="row">
                 <div className="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 className="font-weight-bold">Welcome Aamir</h3>
-                  <widgetYT />
+                  <WidgetYT />
                   <h6 className="font-weight-normal mb-0">All systems are running smoothly! You have <span className="text-primary">3 unread alerts!</span></h6>
                 </div>
                 <div className="col-12 col-xl-4">
@@ -453,46 +437,52 @@ function App() {
             <div className="col-md-6 grid-margin transparent">
               <div className="row">
                 <div className="col-md-6 mb-4 stretch-card transparent">
-                  <div className="card card-tale">
+                  <div className="card"  style={{backgroundColor: '#1DB954'}} >
                     <div className="card-body">
-                      <p className="mb-4">Today’s Bookings</p>
+                      <p className="mb-4">Spotify followers</p>
                       <p className="fs-30 mb-2">4006</p>
-                      <p>10.00% (30 days)</p>
+                      {/* <p>10.00% (30 days)</p> */}
+                      <br></br>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6 mb-4 stretch-card transparent">
-                  <div className="card card-dark-blue">
+                  <div className="card" style={{backgroundColor: '#5B51D8'}} >
                     <div className="card-body">
-                      <p className="mb-4">Total Bookings</p>
+                      <p className="mb-4">Instagram followers</p>
                       <p className="fs-30 mb-2">61344</p>
-                      <p>22.00% (30 days)</p>
+                      {/* <p>22.00% (30 days)</p> */}
+                      <br></br>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                  <div className="card card-light-blue">
+                  <div className="card" style={{backgroundColor: '#1DA1F2'}} >
                     <div className="card-body">
-                      <p className="mb-4">Number of Meetings</p>
+                      <p className="mb-4">Twitter followers</p>
                       <p className="fs-30 mb-2">34040</p>
-                      <p>2.00% (30 days)</p>
+                      {/* <p>2.00% (30 days)</p> */}
+                      <br></br>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6 stretch-card transparent">
-                  <div className="card card-light-danger">
+                <div className="col-md-6 stretch-card transparent"> 
+                  <div className="card" style={{backgroundColor: '#FF0000'}} >
                     <div className="card-body">
-                      <p className="mb-4">Number of Clients</p>
+                      <p className="mb-4">YouTube followers</p>
                       <p className="fs-30 mb-2">47033</p>
-                      <p>0.22% (30 days)</p>
+                      {/* <p>0.22% (30 days)</p> */}
+                      <br></br>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <Spotify />
+          
           <div className="row">
             <div className="col-md-6 grid-margin stretch-card">
               <div className="card">
@@ -522,7 +512,7 @@ function App() {
               </div>
             </div>
             <div className="col-md-6 grid-margin stretch-card">
-            <widgetYT/>
+            <WidgetYT/>
             </div>
           </div>
           <div className="row">
@@ -1053,10 +1043,9 @@ function App() {
     </div>
     
   </div>
-
+  
+  </div>
   /* <!-- container-scroller --> */
-
- 
 
 
 

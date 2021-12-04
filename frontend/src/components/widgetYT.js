@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_KEY = "AIzaSyCDz_op7k_0Qax9H117cniR2jJptLbIIGY";
 
-class widgetYT extends React.Component {
+class WidgetYT extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -135,4 +135,4 @@ class widgetYT extends React.Component {
   }
 }
 
-export default widgetYT;
+export default WidgetYT;
