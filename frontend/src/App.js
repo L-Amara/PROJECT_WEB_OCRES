@@ -5,7 +5,7 @@ import WidgetYT from './components/WidgetYT';
 import Footer from './components/footer';
 
 function App() {
-  return (
+  return (/*
      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -21,12 +21,12 @@ function App() {
           Learn React
         </a>
         <WidgetYT/> 
-        <Footer/> 
+    
       </header>
       
     </div> 
 
-   /*
+  */ 
   <div className="container-scroller">
     <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div className="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -522,17 +522,7 @@ function App() {
               </div>
             </div>
             <div className="col-md-6 grid-margin stretch-card">
-              <div className="card">
-                <div className="card-body">
-                 <div className="d-flex justify-content-between">
-                  <p className="card-title">Sales Report</p>
-                  <a href="#" className="text-info">View all</a>
-                 </div>
-                  <p className="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
-                  <div id="sales-legend" className="chartjs-legend mt-4 mb-2"></div>
-                  <canvas id="sales-chart"></canvas>
-                </div>
-              </div>
+            <WidgetYT/>
             </div>
           </div>
           <div className="row">
@@ -1050,21 +1040,20 @@ function App() {
               </div>
             </div>
         </div>
-        { <!-- content-wrapper ends -->/}
-        { <!-- partial:partials/_footer.html --> }
+        
         <footer className="footer">
           <div className="d-sm-flex justify-content-center justify-content-sm-between">
             <span className="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
             <span className="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i className="ti-heart text-danger ml-1"></i></span>
           </div>
         </footer>
-        { <!-- partial --> }
+        
       </div>
-      { <!-- main-panel ends --> }
+      
     </div>
-    { <!-- page-body-wrapper ends --> }
+    
   </div>
-*/
+
   /* <!-- container-scroller --> */
 
  
