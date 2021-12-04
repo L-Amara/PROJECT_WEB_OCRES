@@ -392,7 +392,6 @@ function App() {
               <div className="row">
                 <div className="col-12 col-xl-8 mb-4 mb-xl-0">
                   <h3 className="font-weight-bold">Welcome Aamir</h3>
-                  <WidgetYT />
                   <h6 className="font-weight-normal mb-0">All systems are running smoothly! You have <span className="text-primary">3 unread alerts!</span></h6>
                 </div>
                 <div className="col-12 col-xl-4">
