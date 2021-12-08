@@ -22,7 +22,6 @@ class WidgetYT extends React.Component {
   }
 
   getall() {
-
     axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet&forUsername=${this.state.recherche}&fields=items(snippet%2Ftitle)&key=${API_KEY}`)
       .then(res => {
         const nvtitle = res.data;
@@ -60,17 +59,13 @@ class WidgetYT extends React.Component {
     console.log(this.state.title);
   }
 
-
-componentDidMount()
-{
+componentDidMount() {
   this.getall();
 }
 
 render() {
   return (
     <div className="container">
-
-
       <div className="card">
         <div className="card-body">
           <p className="card-title">Youtube Details</p>
@@ -87,7 +82,6 @@ render() {
           <div className="row mt-3 ml-1 d-flex align-items-center">
             <img className="photoProfil mr-3" src={this.state.ppurl}></img>
             <h1 className="text-primary">{this.state.title}</h1>
-
           </div>
 
           <div className="d-flex flex-wrap mb-5">
@@ -103,15 +97,12 @@ render() {
               <p className="text-muted">Videos</p>
               <h3 className="text-primary fs-30 font-weight-medium">{this.state.videoCount}</h3>
             </div>
-
           </div>
 
           <canvas id="order-chart"></canvas>
         </div>
       </div>
     </div>
-
-
   );
 }
 }
