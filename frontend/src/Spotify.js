@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 import request from 'request';
-import Profile from './Profile';
-import Gallery from './Gallery';
+/* import Profile from './Profile'; */
+/* import Gallery from './Gallery'; */
 import './spotify.css';
 
 class Spotify extends React.Component {
@@ -11,6 +11,10 @@ class Spotify extends React.Component {
     this.state = {
       query: '',
       tracks: [],
+      playingUrl: '',
+      audio: null,
+      playing: false,
+      followers: 0
     };
   }
 
@@ -31,7 +35,7 @@ class Spotify extends React.Component {
       },
     };
 
-    const SEARCH_URL  = `https://api.spotify.com/v1/search?q=${this.state.query}&type=artist&limit=1`;
+    const SEARCH_URL  = `https://api.spotify.com/v1/search?q=${this.props.query}&type=artist&limit=1`;
     const ARTISTS_URL = 'https://api.spotify.com/v1/artists';
 
     request.post(auth, async (error, response, body) => {
@@ -63,13 +67,104 @@ class Spotify extends React.Component {
     });
   }
 
+
+  renderImage() {
+    if (this.state.artist.images[0]) {
+      return (
+        <div>
+          <br></br>
+        <img
+          alt="Profile"
+          className="profile-image"
+          src={this.state.artist.images[0].url}
+        /><br></br>
+        </div>
+      );
+    }
+  }
+  renderArtist() {
+    
+    if (this.state.artist) {
+        
+      return (
+        
+        <div>
+          {this.state.artist.followers.total}
+        <div className="profile">
+          {this.renderImage()}
+          <div className="profile-info"><br></br>
+            <div className="profile-name">{this.state.artist.name}</div><br></br>
+            <div className="profile-followers">
+              Followers : {this.state.artist.followers.total} <br></br>
+              Popularité : {this.state.artist.popularity} / 100
+              
+            </div>
+            <div className="profile-genres">
+              Genres musicaux :
+              {this.state.artist.genres.map((genre, k) => {
+                const genres = this.state.artist.genres;
+                genre =
+                  genre !== genres[genres.length - 1]
+                    ? ` ${genre},`
+                    : ` ${genre}`;
+                return <span key={k}>{genre}</span>;
+              })}
+            </div>
+          </div>
+          
+        </div><br></br>
+        <div className="track-explanation">Top 10 chansons du moment : </div> <br></br>
+        </div>
+      );
+    }
+    return;
+  }
+
+  playAudio(track) {
+    if (!track.preview_url) {
+      return;
+    }
+    let url = track.preview_url;
+    let audio = new Audio(url);
+    if (!this.state.playing) {
+      audio.play();
+      this.setState({
+        playing: true,
+        playingUrl: url,
+        audio,
+      });
+    } 
+    else {
+      if (this.state.playingUrl === url) {
+        this.state.audio.pause();
+        this.setState({
+          playing: false,
+        });
+      } 
+      else {
+        this.state.audio.pause();
+        audio.play();
+        this.setState({
+          playing: true,
+          playingUrl: url,
+          audio,
+        });
+      }
+    }
+  }
+
   render() {
-    return (
+
+    const { tracks } = this.state;
+    const { followersSpotify , onChangeValue } = this.props;
+
+    
+    return (         
+
       <div className="Spotify">
-        {/* <header className="App-header">Spotify Music Master</header> */}
         <br></br>
         <div>
-          <FormGroup>
+          {/* <FormGroup>
             <InputGroup>
               <FormControl
                 value={this.state.query}
@@ -86,11 +181,50 @@ class Spotify extends React.Component {
               />
               <Button onClick={() => this.search()}>Rechercher</Button>
             </InputGroup>
-          </FormGroup>
+          </FormGroup> */}
 
-          <Profile artist={this.state.artist} />
+        {/* <div>
+          {if(this.props.click=='1') 
+              this.search();
+          }
+         </div> */}
         
-          <Gallery tracks={this.state.tracks} />
+         <Button onClick={() => this.search()}>Rechercher</Button>
+
+         
+
+      
+
+        {/*  <div>{this.state.artist.followers.total} </div> */}
+         
+
+          {/* <Profile artist={this.state.artist}/> */}
+
+          {/* Profile Artist */}
+          <div>{this.renderArtist()}</div>
+
+          <div>tttt{this.state.followers} </div>
+
+
+          {/* Gallery albums Artist */}
+          <div>
+            {tracks.map((track, k) => {
+              const image = track.album.images[0].url;
+              return (
+                <div
+                  key={k}
+                  className="track"
+                  onClick={() => this.playAudio(track)}
+                >
+                  <p className="track-text">{k+1}. {track.name}</p>
+                  <img src={image} className="track-image" alt="track" />
+                  <p className="track-popularity">Popularité : {track.popularity} / 100 </p><br></br>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* <Gallery tracks={this.state.tracks} /> */}
           
         </div>
       </div>
