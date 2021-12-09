@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 const _ = require('lodash');
-const youtubeAPI = require('../public/javascripts/youtubeAPI');
+/* const youtubeAPI = require('../public/javascripts/youtubeAPI'); */
 
 
 
