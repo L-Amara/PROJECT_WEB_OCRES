@@ -50,19 +50,16 @@ class Spotify extends React.Component {
 
         request.get(options, (error, response, body) => {
           const artist = body.artists.items[0];
-        this.props.onChange(artist.followers.total)
-        this.setState({ artist })
-   
-
-          
+          this.props.onChange(artist.popularity, artist.followers.total)
+          this.setState({ artist })
+        
           let new_options = { ...options };
 
           const NEW_URL = `${ARTISTS_URL}/${artist.id}/top-tracks?country=FR`;
           new_options.url = NEW_URL;
           request.get(new_options, (error, response, res) => {
-           
-            const tracks = res.tracks;
-            this.setState({ tracks });
+              const tracks = res.tracks;
+              this.setState({ tracks });
           });
         });
       }
@@ -154,6 +151,11 @@ class Spotify extends React.Component {
       }
     }
   }
+
+  componentDidMount() {
+    this.search();
+  }
+  
 
   render() {
 

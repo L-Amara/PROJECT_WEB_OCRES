@@ -71,7 +71,7 @@ render() {
       <div className="card">
         <div className="card-body">
           <p className="card-title">Youtube Details</p>
-          <p className="font-weight-500">Type the name of the youtube channel</p>
+          <p className="font-weight-500">Entrez le nom d'une chaine YouTube</p>
 
           <div className="input-group">
             <div className="input-group-prepend hover-cursor" id="navbar-search-icon">

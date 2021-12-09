@@ -13,27 +13,23 @@ class Dashboard extends React.Component{
         super(props);
         this.state = {
             nameArtist: 'Adele',
+            populariteArtist : 0,
             followersSpotify : 0,
-            followersInstagram : 0,
             followersTwitter : 0,
             followersYouTube : 0        
         }
     }
-    onChangeValueHandler = (val) => {
-        this.setState({ followersSpotify: val.target.followersSpotify })
-    }
 
-    onChange =(followers) => {
+    onChange =(popularite, followers) => {
+        this.setState({populariteArtist: popularite});
         this.setState({followersSpotify: followers});
     }
     onChangeYT=(subs) => {
         console.log(subs);
         this.setState({followersYouTube: subs});
-}
+    }
 
     render() {  
-
-        const { followersSpotify } = this.state;
         
         return (     
    
@@ -67,25 +63,10 @@ class Dashboard extends React.Component{
                         this.setState({ nameArtist: event.target.value });
                         }}
                     />
-
-                    {/* Appeler fonction search de composant Spotify */}
-                    {/* <Button onClick={() => <Spotify>search()</Spotify>}>Rechercher</Button> */}
-                    {/* <Button onClick={this.search.bind(this)} /> */}
-
-                    {/* <Spotify ref={childRef} />
-                    <Button onClick={() => childRef.current.search()}>Click</Button> */}
-
-                    {/* <Spotify ref={instance => { this.Spotify = instance; }} />
-                    <Button onClick={() => { this.Spotify.search(); }}>Click</Button> */}
-
-                    {/* <Button onClick={this.search.bind(this)} /> */}
                     
                     <ul className="navbar-nav navbar-nav-right">
                     <li className="nav-item dropdown">
-                        <a className="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                        <i className="icon-bell mx-0"></i>
-                        <span className="count"></span>
-                        </a>
+                        
                         <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                         <p className="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
                         <a className="dropdown-item preview-item">
@@ -336,20 +317,6 @@ class Dashboard extends React.Component{
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                        <i className="icon-layout menu-icon"></i>
-                        <span className="menu-title">UI Elements</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="ui-basic">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
                         <i className="icon-columns menu-icon"></i>
                         <span className="menu-title">Form elements</span>
@@ -361,74 +328,7 @@ class Dashboard extends React.Component{
                         </ul>
                         </div>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                        <i className="icon-bar-graph menu-icon"></i>
-                        <span className="menu-title">Charts</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="charts">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-                        <i className="icon-grid-2 menu-icon"></i>
-                        <span className="menu-title">Tables</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="tables">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                        <i className="icon-contract menu-icon"></i>
-                        <span className="menu-title">Icons</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="icons">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/icons/mdi.html">Mdi icons</a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                        <i className="icon-head menu-icon"></i>
-                        <span className="menu-title">User Pages</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="auth">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/login.html"> Login </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/register.html"> Register </a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-                        <i className="icon-ban menu-icon"></i>
-                        <span className="menu-title">Error pages</span>
-                        <i className="menu-arrow"></i>
-                        </a>
-                        <div className="collapse" id="error">
-                        <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                            <li className="nav-item"> <a className="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="pages/documentation/documentation.html">
-                        <i className="icon-paper menu-icon"></i>
-                        <span className="menu-title">Documentation</span>
-                        </a>
-                    </li>
+                   
                     </ul>
                 </nav>
 
@@ -441,21 +341,13 @@ class Dashboard extends React.Component{
                         <div className="row">
                             <div className="col-12 col-xl-8 mb-4 mb-xl-0">
                             <h3 className="font-weight-bold">Welcome {this.state.nameArtist}</h3>
-                            <h6 className="font-weight-normal mb-0">All systems are running smoothly! You have <span className="text-primary">3 unread alerts!</span></h6>
                             </div>
                             <div className="col-12 col-xl-4">
                             <div className="justify-content-end d-flex">
-                            <div className="dropdown flex-md-grow-1 flex-xl-grow-0">
-                                <button className="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <i className="mdi mdi-calendar"></i> Today (10 Jan 2021)
+                                <button className="btn btn-sm btn-light bg-white" type="button" aria-haspopup="true" aria-expanded="true">
+                                <i className="mdi mdi-calendar"></i> Date : {new Date().toLocaleString() + ''}
                                 </button>
-                                <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                                <a className="dropdown-item" href="#">January - March</a>
-                                <a className="dropdown-item" href="#">March - June</a>
-                                <a className="dropdown-item" href="#">June - August</a>
-                                <a className="dropdown-item" href="#">August - November</a>
-                                </div>
-                            </div>
+                               
                             </div>
                             </div>
                         </div>
@@ -467,17 +359,7 @@ class Dashboard extends React.Component{
                         <div className="card tale-bg">
                             <div className="card-people mt-auto">
                             <img src="images/dashboard/people.svg" alt="people"/>
-                            <div className="weather-info">
-                                <div className="d-flex">
-                                <div>
-                                    <h2 className="mb-0 font-weight-normal"><i className="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                                </div>
-                                <div className="ml-2">
-                                    <h4 className="location font-weight-normal">Bangalore</h4>
-                                    <h6 className="font-weight-normal">India</h6>
-                                </div>
-                                </div>
-                            </div>
+                        
                             </div>
                         </div>
                         </div>
@@ -485,20 +367,20 @@ class Dashboard extends React.Component{
                         <div className="col-md-6 grid-margin transparent">
                         <div className="row">
                             <div className="col-md-6 mb-4 stretch-card transparent">
-                            <div className="card"  style={{backgroundColor: '#1DB954'}} >
+                            <div className="card"  style={{backgroundColor: '#5B51D8'}} >
                                 <div className="card-body">
-                                <p className="mb-4">Spotify followers</p>
-                                <p className="fs-30 mb-2">{this.state.followersSpotify}</p>
+                                <p className="mb-4">Popularité de l'artiste</p>
+                                <p className="fs-30 mb-2">{this.state.populariteArtist}</p>
                                 {/* <p>10.00% (30 days)</p> */}
                                 <br></br>
                                 </div>
                             </div>
                             </div>
                             <div className="col-md-6 mb-4 stretch-card transparent">
-                            <div className="card" style={{backgroundColor: '#5B51D8'}} >
+                            <div className="card" style={{backgroundColor: '#1DB954'}} >
                                 <div className="card-body">
-                                <p className="mb-4">Instagram followers</p>
-                                <p className="fs-30 mb-2">{this.state.followersInstagram}</p>
+                                <p className="mb-4">Spotify followers</p>
+                                <p className="fs-30 mb-2">{this.state.followersSpotify}</p>
                                 {/* <p>22.00% (30 days)</p> */}
                                 <br></br>
                                 </div>
@@ -529,8 +411,7 @@ class Dashboard extends React.Component{
                         </div>
                         </div>
                     </div>
-
-                    {/* METTRE PARTIE SPOTIFY     */}               
+         
 
                     
                     <div className="row">
@@ -547,7 +428,7 @@ class Dashboard extends React.Component{
                     </div>
 
                     <div className="row">
-                            <Spotify query={this.state.nameArtist} followersSpotify={this.state.followersSpotify} onChange={this.onChange} />
+                            <Spotify query={this.state.nameArtist} populariteArtist={this.state.populariteArtist} followersSpotify={this.state.followersSpotify} onChange={this.onChange} />
                     </div>
 
                     

@@ -42,7 +42,7 @@ render() {
                 <h4 class="card-title">Agenda</h4>
                 <button type="button" class="btn btn-primary btn-icon-text float-end">
                 <i class="mdi mdi-note-plus"></i>
-                          Ajouter un événements
+                          Ajouter un événement
                 </button>
 
                 </div>
