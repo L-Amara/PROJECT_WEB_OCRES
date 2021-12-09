@@ -30,11 +30,22 @@ componentDidMount() {
   this.getall();
 }
 
+addEvent(eventStartTime, eventEndTime){
+
+}
+
 render() {
   return (
     <div class="card">
               <div class="card-body">
+                <div class="d-flex justify-content-between">
                 <h4 class="card-title">Agenda</h4>
+                <button type="button" class="btn btn-primary btn-icon-text float-end">
+                <i class="mdi mdi-note-plus"></i>
+                          Ajouter un événements
+                </button>
+
+                </div>
                 <p class="card-description">
                   Concerts et événements à venir
                 </p>
