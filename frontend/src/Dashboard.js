@@ -22,6 +22,10 @@ class Dashboard extends React.Component{
         this.setState({ followersSpotify: val.target.followersSpotify })
     }
 
+    onChange =(followers) => {
+        this.setState({followersSpotify: followers});
+    }
+
     render() {  
 
         const { followersSpotify } = this.state;
@@ -427,7 +431,7 @@ class Dashboard extends React.Component{
                                     />
                                     {/* <Button onClick={() => <Spotify query={this.state.nameArtist}/>}>Rechercher</Button> */}
                                 
-                                    <Spotify query={this.state.nameArtist} followersSpotify={this.state.followersSpotify} onChangeValue={this.onChangeValueHandler} />
+                                    <Spotify query={this.state.nameArtist} followersSpotify={this.state.followersSpotify} onChange={this.onChange} />
                                 </InputGroup>
                             </FormGroup>
 
@@ -544,7 +548,7 @@ class Dashboard extends React.Component{
                             />
                             {/* <Button onClick={() => <Spotify query={this.state.nameArtist}/>}>Rechercher</Button> */}
                         
-                            <Spotify query={this.state.nameArtist}/>
+                            <Spotify query={this.state.nameArtist} onChange={this.onChange}/>
                         </InputGroup>
                     </FormGroup>
 

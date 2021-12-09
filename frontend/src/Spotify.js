@@ -54,6 +54,8 @@ class Spotify extends React.Component {
         request.get(options, (error, response, body) => {
           const artist = body.artists.items[0];
           this.setState({ artist });
+          this.props.onChange(artist.followers.total);
+          
           let new_options = { ...options };
 
           const NEW_URL = `${ARTISTS_URL}/${artist.id}/top-tracks?country=FR`;
