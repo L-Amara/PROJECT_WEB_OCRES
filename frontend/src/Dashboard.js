@@ -2,6 +2,7 @@ import React from 'react';
 import WidgetYT from './components/widgetYT';
 import Footer from './components/footer';
 import Spotify from './Spotify';
+/* import Twitter from './Twitter'; */
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 import WidgetCal3 from './components/widgetCal3';
 
@@ -56,6 +57,25 @@ class Dashboard extends React.Component{
                         </div>
                     </li>
                     </ul> */}
+                    <FormControl
+                        value={this.state.nameArtist}
+                        onChange={(event) => {
+                        this.setState({ nameArtist: event.target.value });
+                        }}
+                    />
+
+                    {/* Appeler fonction search de composant Spotify */}
+                    {/* <Button onClick={() => <Spotify>search()</Spotify>}>Rechercher</Button> */}
+                    {/* <Button onClick={this.search.bind(this)} /> */}
+
+                    {/* <Spotify ref={childRef} />
+                    <Button onClick={() => childRef.current.search()}>Click</Button> */}
+
+                    {/* <Spotify ref={instance => { this.Spotify = instance; }} />
+                    <Button onClick={() => { this.Spotify.search(); }}>Click</Button> */}
+
+                    {/* <Button onClick={this.search.bind(this)} /> */}
+                    
                     <ul className="navbar-nav navbar-nav-right">
                     <li className="nav-item dropdown">
                         <a className="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
@@ -414,29 +434,6 @@ class Dashboard extends React.Component{
                     <div className="content-wrapper">
                     <div className="row">
                         <div className="col-md-12 grid-margin">
-                                <FormGroup>
-                                <InputGroup>
-                                    <FormControl
-                                        value={this.state.nameArtist}
-                                        onChange={(event) => {
-                                        this.setState({ nameArtist: event.target.value });
-                                        }}
-                                        /* onKeyPress={(event) => {
-                                        if (event.key === 'Enter') {
-                                            this.search();
-                                        }
-                                        }} */
-                                        type="text"
-                                        placeholder="Entrer un artiste"
-                                    />
-                                    {/* <Button onClick={() => <Spotify query={this.state.nameArtist}/>}>Rechercher</Button> */}
-                                
-                                    <Spotify query={this.state.nameArtist} followersSpotify={this.state.followersSpotify} onChange={this.onChange} />
-                                </InputGroup>
-                            </FormGroup>
-
-                        </div>
-                        <div className="col-md-12 grid-margin">
                         <div className="row">
                             <div className="col-12 col-xl-8 mb-4 mb-xl-0">
                             <h3 className="font-weight-bold">Welcome Aamir</h3>
@@ -529,31 +526,7 @@ class Dashboard extends React.Component{
                         </div>
                     </div>
 
-                    {/* <Spotify nameArtist={this.state.nameArtist}/> */}
-                    
-                    <FormGroup>
-                        <InputGroup>
-                            <FormControl
-                                value={this.state.nameArtist}
-                                onChange={(event) => {
-                                this.setState({ nameArtist: event.target.value });
-                                }}
-                                /* onKeyPress={(event) => {
-                                if (event.key === 'Enter') {
-                                    this.search();
-                                }
-                                }} */
-                                type="text"
-                                placeholder="Entrer un artiste"
-                            />
-                            {/* <Button onClick={() => <Spotify query={this.state.nameArtist}/>}>Rechercher</Button> */}
-                        
-                            <Spotify query={this.state.nameArtist} onChange={this.onChange}/>
-                        </InputGroup>
-                    </FormGroup>
-
-
-                    
+                    {/* METTRE PARTIE SPOTIFY     */}               
 
                     
                     <div className="row">
@@ -568,6 +541,14 @@ class Dashboard extends React.Component{
                         
                         </div>
                     </div>
+
+                    <div className="row">
+                            <Spotify query={this.state.nameArtist} followersSpotify={this.state.followersSpotify} onChange={this.onChange} />
+                    </div>
+
+                    
+
+
                     <div className="row">
                         <div className="col-md-12 grid-margin stretch-card">
                         <div className="card position-relative">

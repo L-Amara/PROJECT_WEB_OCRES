@@ -1,8 +1,6 @@
 import React from 'react';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 import request from 'request';
-/* import Profile from './Profile'; */
-/* import Gallery from './Gallery'; */
 import './spotify.css';
 
 class Spotify extends React.Component {
@@ -13,8 +11,7 @@ class Spotify extends React.Component {
       tracks: [],
       playingUrl: '',
       audio: null,
-      playing: false,
-      followers: 0
+      playing: false
     };
   }
 
@@ -91,13 +88,13 @@ class Spotify extends React.Component {
       return (
         
         <div>
-          {this.state.artist.followers.total}
+          
         <div className="profile">
           {this.renderImage()}
           <div className="profile-info"><br></br>
             <div className="profile-name">{this.state.artist.name}</div><br></br>
             <div className="profile-followers">
-              Followers : {this.state.artist.followers.total} <br></br>
+              {/* Followers : {this.state.artist.followers.total} <br></br> */}
               Popularité : {this.state.artist.popularity} / 100
               
             </div>
@@ -158,55 +155,19 @@ class Spotify extends React.Component {
   render() {
 
     const { tracks } = this.state;
-    const { followersSpotify , onChangeValue } = this.props;
 
     
     return (         
 
       <div className="Spotify">
         <br></br>
-        <div>
-          {/* <FormGroup>
-            <InputGroup>
-              <FormControl
-                value={this.state.query}
-                onChange={(event) => {
-                  this.setState({ query: event.target.value });
-                }}
-                onKeyPress={(event) => {
-                  if (event.key === 'Enter') {
-                    this.search();
-                  }
-                }}
-                type="text"
-                placeholder="Entrer un artiste"
-              />
-              <Button onClick={() => this.search()}>Rechercher</Button>
-            </InputGroup>
-          </FormGroup> */}
+        <div className='center'>
+          
+         <Button onClick={() => this.search()}>Afficher le top 10 des chansons du moment</Button>
 
-        {/* <div>
-          {if(this.props.click=='1') 
-              this.search();
-          }
-         </div> */}
-        
-         <Button onClick={() => this.search()}>Rechercher</Button>
-
-         
-
-      
-
-        {/*  <div>{this.state.artist.followers.total} </div> */}
-         
-
-          {/* <Profile artist={this.state.artist}/> */}
 
           {/* Profile Artist */}
           <div>{this.renderArtist()}</div>
-
-          <div>tttt{this.state.followers} </div>
-
 
           {/* Gallery albums Artist */}
           <div>
@@ -226,7 +187,6 @@ class Spotify extends React.Component {
             })}
           </div>
 
-          {/* <Gallery tracks={this.state.tracks} /> */}
           
         </div>
       </div>
