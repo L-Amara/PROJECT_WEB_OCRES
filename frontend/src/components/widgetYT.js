@@ -32,7 +32,9 @@ class WidgetYT extends React.Component {
       .then(res => {
         const nvsubscriberCount = res.data;
         //console.log(nvsubscriberCount);
-        Object.entries(nvsubscriberCount).length !== 0 ? this.setState({ subscriberCount: nvsubscriberCount.items[0].statistics.subscriberCount }) : this.setState({ subscriberCount: ' ' })    //
+        console.log(nvsubscriberCount.items[0].statistics.subscriberCount)
+        Object.entries(nvsubscriberCount).length !== 0 ? this.setState({ subscriberCount: nvsubscriberCount.items[0].statistics.subscriberCount } ): this.setState({ subscriberCount: ' ' });
+        Object.entries(nvsubscriberCount).length !== 0 && (this.props.onChangeYT(nvsubscriberCount.items[0].statistics.subscriberCount))
       });
     axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=statistics&forUsername=${this.state.recherche}&fields=items(statistics%2FviewCount)&key=${API_KEY}`)
       .then(res => {
@@ -98,8 +100,6 @@ render() {
               <h3 className="text-primary fs-30 font-weight-medium">{this.state.videoCount}</h3>
             </div>
           </div>
-
-          <canvas id="order-chart"></canvas>
         </div>
       </div>
     </div>

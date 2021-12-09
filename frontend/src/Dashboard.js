@@ -26,6 +26,10 @@ class Dashboard extends React.Component{
     onChange =(followers) => {
         this.setState({followersSpotify: followers});
     }
+    onChangeYT=(subs) => {
+        console.log(subs);
+        this.setState({followersYouTube: subs});
+}
 
     render() {  
 
@@ -537,7 +541,7 @@ class Dashboard extends React.Component{
                         </div>
                         <div className="col-md-6 grid-margin stretch-card">
                         
-                        <WidgetYT/>
+                        <WidgetYT onChangeYT={this.onChangeYT}/>
                         
                         </div>
                     </div>
