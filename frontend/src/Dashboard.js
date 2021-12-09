@@ -2,7 +2,7 @@ import React from 'react';
 import WidgetYT from './components/widgetYT';
 import Footer from './components/footer';
 import Spotify from './Spotify';
-/* import Twitter from './Twitter'; */
+import Twitter from './Twitter';
 import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
 import WidgetCal3 from './components/widgetCal3';
 
@@ -429,6 +429,10 @@ class Dashboard extends React.Component{
 
                     <div className="row">
                             <Spotify query={this.state.nameArtist} populariteArtist={this.state.populariteArtist} followersSpotify={this.state.followersSpotify} onChange={this.onChange} />
+                    </div>
+
+                    <div className="row">
+                            <Twitter query={this.state.nameArtist} followersTwitter={this.state.followersTwitter} />
                     </div>
 
                     

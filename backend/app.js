@@ -16,19 +16,19 @@ require("dotenv/config");
 const bodyparser=require("body-parser");
 const cors=require("cors");
 
-app.get('/test', (req,res)=> {
+/* app.get('/test', (req,res)=> {
     res.json({
         req: req.method,
         data: "This is a GET"
     })
-});
+}); */
 
-app.put('/test', (req,res)=> {
+/* app.put('/test', (req,res)=> {
     res.json({
         req: req.method,
         data: "This is a PUT"
     })
-});
+}); */
 
 
 var app = express();
