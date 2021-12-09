@@ -12,8 +12,8 @@ class WidgetYT extends React.Component {
       videoCount: undefined,
       title: undefined,
       ppurl: undefined,                       //profile picture  
-      recherche: 'DrakeOfficial',                     //drake by default
-      id: 'UCNTQH0uJzryQB4rRLGlv-Ww',       //drake youtube channel ID by default
+      recherche: 'AdeleVEVO',                     //Adele by default
+      id: 'adele',       //Adele youtube channel ID by default
     }
   }
 
@@ -79,7 +79,7 @@ render() {
                 <i className="icon-search" onClick={() => this.getall()} ></i>
               </span>
             </div>
-            <input type="text" className="form-control" id="navbar-search-input" placeholder="DrakeOfficial" aria-label="search" aria-describedby="search" onChange={(e) => this.termeRecherche(e)} onKeyPress={(e) => { if (e.key === 'Enter') this.getall() }} />
+            <input type="text" className="form-control" id="navbar-search-input" placeholder="AdeleVEVO" aria-label="search" aria-describedby="search" onChange={(e) => this.termeRecherche(e)} onKeyPress={(e) => { if (e.key === 'Enter') this.getall() }} />
           </div>
           <div className="row mt-3 ml-1 d-flex align-items-center">
             <img className="photoProfil mr-3" src={this.state.ppurl}></img>
