@@ -40,10 +40,61 @@ render() {
               <div class="card-body">
                 <div class="d-flex justify-content-between">
                 <h4 class="card-title">Agenda</h4>
-                <button type="button" class="btn btn-primary btn-icon-text float-end">
-                <i class="mdi mdi-note-plus"></i>
-                          Ajouter un événement
-                </button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+              Ajouter un événement
+            </button>
+
+
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">X</button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card">
+                      <div class="card-body">
+
+                        <form class="forms-sample" onSubmit={this.handleSubmit}>
+                          <div class="form-group row">
+                            <label>Name of the Event</label>
+
+                            <input type="text" class="form-control" id='eventName' />
+
+                          </div>
+                          <div class="form-group row">
+                            <label>Start date of the event</label>
+                            <input class="form-control" placeholder="dd/mm/yyyy" id='eventDate' />
+                          </div>
+                          <div class="form-group row">
+                            <label>Start time of the event</label>
+                            <input class="form-control" placeholder="hh:mm:ss" id='startTime' />
+                          </div>
+                          <div class="form-group row">
+                            <label>End date of the event</label>
+                            <input class="form-control" placeholder="dd/mm/yyyy" id='endDate' />
+                          </div>
+                          <div class="form-group row">
+                            <label>End time of the event</label>
+                            <input class="form-control" placeholder="hh:mm:ss" id='endTime' />
+                          </div>
+
+                          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                          <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id='submit' >Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
                 </div>
                 <p class="card-description">
