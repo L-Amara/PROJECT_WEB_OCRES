@@ -1,25 +1,19 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "devStart": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node ./bin/www"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "axios": "^0.24.0",
+    "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
+    "debug": "~2.6.9",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "lyrics-finder": "^21.7.0",
-    "mongoose": "^6.0.13",
-    "spotify-web-api-node": "^5.0.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "express": "^4.16.4",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.1.0",
+    "morgan": "~1.9.1"
   }
 }
