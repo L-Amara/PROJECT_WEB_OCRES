@@ -32,7 +32,7 @@ class WidgetYT extends React.Component {
       .then(res => {
         const nvsubscriberCount = res.data;
         //console.log(nvsubscriberCount);
-        console.log(nvsubscriberCount.items[0].statistics.subscriberCount)
+        //console.log(nvsubscriberCount.items[0].statistics.subscriberCount)
         Object.entries(nvsubscriberCount).length !== 0 ? this.setState({ subscriberCount: nvsubscriberCount.items[0].statistics.subscriberCount } ): this.setState({ subscriberCount: ' ' });
         Object.entries(nvsubscriberCount).length !== 0 && (this.props.onChangeYT(nvsubscriberCount.items[0].statistics.subscriberCount))
       });
