@@ -31,7 +31,7 @@ const calendar = google.calendar({ version: 'v3', auth: oAUth2Client })
         
         
         const event = {
-            summary: 'Big Show',
+            summary: 'Big Show 2',
             location: '37 Quai de Grenelle, 75015 Paris',
             colorId: 1,
             description: 'super test about new event so hyped :)',

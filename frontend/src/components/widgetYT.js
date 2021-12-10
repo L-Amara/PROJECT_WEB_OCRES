@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import '../spotify.css';
+
 
 const API_KEY = "AIzaSyCDz_op7k_0Qax9H117cniR2jJptLbIIGY";
 
@@ -82,7 +84,7 @@ render() {
             <input type="text" className="form-control" id="navbar-search-input" placeholder="AdeleVEVO" aria-label="search" aria-describedby="search" onChange={(e) => this.termeRecherche(e)} onKeyPress={(e) => { if (e.key === 'Enter') this.getall() }} />
           </div>
           <div className="row mt-3 ml-1 d-flex align-items-center">
-            <img className="photoProfil mr-3" src={this.state.ppurl}></img>
+            <img className="photoProfil mr-3" src={this.state.ppurl} id="ytpp"></img>
             <h1 className="text-primary">{this.state.title}</h1>
           </div>
 

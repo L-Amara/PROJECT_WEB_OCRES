@@ -1,9 +1,9 @@
 var express = require('express');
 var Chansons = require('../models/Database');
-
+const {createSongs} = require("../controllers/songsController")
 var router = express.Router();
 
-
+router.route("/insert").post(createSongs)
 // Get 
 router.get('/read', async (req, res) => {
     try {
@@ -15,17 +15,18 @@ router.get('/read', async (req, res) => {
 });
 
 // Post
-router.post('/insert', async (req, res) => {
+/*router.post('/insert', async (req, res) => {
     const songs = new Chansons({
-        artist: req.body.artist
+        artist: req.body.artist,
+        title:req.body.title
     });
     try {
         const postedSong = await songs.save();
         res.json(postedSong);
-    } catch (error) {
-        res.json({message:error})
+    } catch (err) {
+        res.json({message:err})
     }
-});
+});*/
 
 // Delete
 router.delete('/delete/:id', async (req, res) => {
