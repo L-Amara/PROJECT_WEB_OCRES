@@ -1,12 +1,13 @@
-const express = require('express');
-const Post = require('../models/Post');
+var express = require('express');
+var Artists = require('../models/Database');
 
-const router = express.Router();
+var router = express.Router();
+
 
 // Get 
 router.get('/read', async (req, res) => {
     try {
-        const getUser = await Post.find();
+        const getUser = await Artists.find();
         res.json(getUser);
     } catch (err) {
         res.json({ message: err });
@@ -15,11 +16,11 @@ router.get('/read', async (req, res) => {
 
 // Post
 router.post('/insert', async (req, res) => {
-    const post = new Post({
+    const artists = new Artists({
         artist: req.body.artist
     });
     try {
-        const postedUser = await post.save();
+        const postedUser = await artists.save();
         res.json(postedUser);
     } catch (error) {
         res.json({message:error})
@@ -29,7 +30,7 @@ router.post('/insert', async (req, res) => {
 // Delete
 router.delete('/delete/:id', async (req, res) => {
     try {
-        const deletedUser = await Post.remove({ _id: req.params.id })
+        const deletedUser = await Artists.remove({ _id: req.params.id })
         res.json(deletedUser)
     } catch (error) {
         res.json({message:error})
@@ -39,7 +40,7 @@ router.delete('/delete/:id', async (req, res) => {
 // Update 
 router.patch('/:postId', async (req, res) => {
     try {
-        const updatedUser = await Post.updateOne({ _id: req.params.postId },
+        const updatedUser = await Artists.updateOne({ _id: req.params.postId },
             { $set: { name: req.body.name } });
         res.json(updatedUser);
     } catch (error) {

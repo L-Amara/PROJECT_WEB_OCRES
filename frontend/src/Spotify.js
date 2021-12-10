@@ -204,3 +204,5 @@ class Spotify extends React.Component {
 }
 
 export default Spotify;
+
+/* Source : https://github.com/sophieklm/music-master */

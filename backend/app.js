@@ -40,7 +40,7 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-
+app.use("/artists", artistsRouter);
 app.use("/channelinfo",channelinfoRouter);      //new
 
 
@@ -63,4 +63,4 @@ app.listen(port,hostname),() =>{
 
 
 module.exports = app;
-app.listen(3001)
+/* app.listen(3001) */

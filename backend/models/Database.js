@@ -7,4 +7,4 @@ const schema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Ma Playlist', schema);
+module.exports = mongoose.model('Artist', schema);
