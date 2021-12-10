@@ -70,6 +70,9 @@ class Spotify extends React.Component {
   renderImage() {
     if (this.state.artist.images[0]) {
       return (
+
+
+
         <div>
           <br></br>
         <img
@@ -167,8 +170,9 @@ class Spotify extends React.Component {
     return (         
 
       <div className="Spotify">
+        <div className='card'>
+        <div className='card-body'>
 
-        
         <br></br>
         <div className='center'>
           
@@ -198,6 +202,12 @@ class Spotify extends React.Component {
 
           
         </div>
+
+
+        </div>
+        </div>
+
+        
       </div>
     );
   }

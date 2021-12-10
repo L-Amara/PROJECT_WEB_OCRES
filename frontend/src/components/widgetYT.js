@@ -70,7 +70,7 @@ render() {
     <div className="container">
       <div className="card">
         <div className="card-body">
-          <p className="card-title">Youtube Details</p>
+          <p className="card-title">Statistiques Youtube</p>
           <p className="font-weight-500">Entrez le nom d'une chaine YouTube</p>
 
           <div className="input-group">
