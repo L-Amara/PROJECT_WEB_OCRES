@@ -95,7 +95,7 @@ class Spotify extends React.Component {
             <div className="profile-name">{this.state.artist.name}</div><br></br>
             <div className="profile-followers">
               {/* Followers : {this.state.artist.followers.total} <br></br> */}
-              Popularité : {this.state.artist.popularity} / 100
+              {/* Popularité : {this.state.artist.popularity} / 100 */}
               
             </div>
             <div className="profile-genres">
@@ -162,9 +162,13 @@ class Spotify extends React.Component {
     const { tracks } = this.state;
 
     
+
+    
     return (         
 
       <div className="Spotify">
+
+        
         <br></br>
         <div className='center'>
           
