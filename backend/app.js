@@ -8,6 +8,7 @@ const port=3001;
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var chansonsRouter = require("./routes/chanson");
 
 var channelinfoRouter = require("./routes/channelinfo");  //new
 
@@ -40,7 +41,7 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/artists", artistsRouter);
+app.use("/chanson",chansonsRouter);
 app.use("/channelinfo",channelinfoRouter);      //new
 
 
