@@ -306,18 +306,18 @@ class Dashboard extends React.Component{
                     <li className="nav-item">
                         <a className="nav-link" href="index.html">
                         <i className="icon-grid menu-icon"></i>
-                        <span className="menu-title">Dashboard</span>
+                        <span className="menu-title">Tableau de bord</span>
                         </a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
                         <i className="icon-columns menu-icon"></i>
-                        <span className="menu-title">Form elements</span>
+                        <span className="menu-title">Inscription</span>
                         <i className="menu-arrow"></i>
                         </a>
                         <div className="collapse" id="form-elements">
                         <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"><a className="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a></li>
+                            <li className="nav-item"><a className="nav-link" href="pages/forms/basic_elements.html">Artist</a></li>
                         </ul>
                         </div>
                     </li>
