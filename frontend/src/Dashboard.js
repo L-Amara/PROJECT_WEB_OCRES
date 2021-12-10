@@ -403,7 +403,7 @@ class Dashboard extends React.Component {
                                         <div className="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                                             <div className="card" style={{ backgroundColor: '#1DA1F2' }} >
                                                 <div className="card-body">
-                                                    <p className="mb-4">Followers Twitter</p>
+                                                    <p className="mb-4">Abonnés Twitter</p>
                                                     <p className="fs-30 mb-2">{this.state.followersTwitter}</p>
                                                     <br></br>
                                                 </div>
