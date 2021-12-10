@@ -50,7 +50,7 @@ app.use(bodyparser.json());
 try{
     mongoose.connect(process.env.DB_CONNECTION,
         {useNewUrlParser: true},
-        () => console.log("Connected to DB!")
+        () => console.log("Connected to database!")
 )}catch(err){
     res.json({message:err});
 }
@@ -63,3 +63,4 @@ app.listen(port,hostname),() =>{
 
 
 module.exports = app;
+app.listen(3001)
