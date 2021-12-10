@@ -4,7 +4,11 @@ const schema = mongoose.Schema({
     artist: {
         type: String,
         required: true
+    },
+    title: {
+        type: String,
+        required: true
     }
 });
 
-module.exports = mongoose.model('Artist', schema);
+module.exports = mongoose.model('Chanson', schema);
