@@ -349,15 +349,15 @@ class Dashboard extends React.Component {
                             <div className="row">
 
                                 <div className="col-md-6 grid-margin stretch-card">
-                                    <div className="card tale-bg">
                                         <div className="card-people mt-auto">
                                             <img src="images/dashboard/singer.jpg" alt="people" />
 
                                         </div>
-                                    </div>
                                 </div>
 
                                 <div className="col-md-6 grid-margin transparent">
+                                    <br></br><br></br><br></br>
+
                                     <div className="row">
                                         <div className="col-md-6 mb-4 stretch-card transparent">
                                             <div className="card" style={{ backgroundColor: '#DFCBFD' }} >
@@ -399,6 +399,8 @@ class Dashboard extends React.Component {
                                             </div>
                                         </div>
                                     </div>
+                                    <br></br>
+                                    <br></br>
                                     <div className="row">
                                         <div className="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                                             <div className="card" style={{ backgroundColor: '#1DA1F2' }} >
