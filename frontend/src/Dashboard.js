@@ -14,7 +14,7 @@ class Dashboard extends React.Component{
             nameArtist: 'Adele',
             populariteArtist : 0,
             followersSpotify : 0,
-            followersTwitter : 0,
+            followersTwitter : 27032009,
             followersYouTube : 0
         }
     }
@@ -312,12 +312,12 @@ class Dashboard extends React.Component{
                     <li className="nav-item">
                         <a className="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
                         <i className="icon-columns menu-icon"></i>
-                        <span className="menu-title">Inscription</span>
+                        <span className="menu-title">Database</span>
                         <i className="menu-arrow"></i>
                         </a>
                         <div className="collapse" id="form-elements">
                         <ul className="nav flex-column sub-menu">
-                            <li className="nav-item"><a className="nav-link" href="pages/forms/basic_elements.html">Artist</a></li>
+                            <li className="nav-item"><a className="nav-link" href="pages/forms/basic_elements.html">Chansons</a></li>
                         </ul>
                         </div>
                     </li>
