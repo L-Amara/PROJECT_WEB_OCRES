@@ -11,4 +11,4 @@ const schema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Chanson', schema);
+module.exports = mongoose.model('Database', schema);
