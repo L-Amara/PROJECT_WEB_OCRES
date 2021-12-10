@@ -351,7 +351,7 @@ class Dashboard extends React.Component{
                         <div className="col-md-6 grid-margin stretch-card">
                         <div className="card tale-bg">
                             <div className="card-people mt-auto">
-                            <img src="images/dashboard/people.svg" alt="people"/>
+                            <img src="images/dashboard/singer.jpg" alt="people"/>
                         
                             </div>
                         </div>
